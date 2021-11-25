@@ -1,0 +1,9 @@
+#include "martini_completo.itp"
+#include "btalike.itp"
+
+[ system ]
+40 NEW FIBRA - con punte
+
+[ molecules ]
+BTA 500
+

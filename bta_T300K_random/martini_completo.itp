@@ -1,0 +1,40 @@
+[ defaults ]
+1 1
+
+[ atomtypes ]
+; STANDARD types, 4:1 mapping
+P5   72.0 0.000 A 0.0 0.0
+C1   72.0 0.000 A 0.0 0.0
+D    24.0 0.000 A 0.0 0.0
+;P1   72.0 0.000 A 0.0 0.0
+
+[ nonbond_params ]
+
+; levels of LJ interaction:
+; O     - supra attractive:     (eps=5.6, s=0.47) 
+; I     - attractive:       (eps=5.0, s=0.47) 
+; II    - almost attractive:    (eps=4.5, s=0.47)
+; III   - semi attractive:  (eps=4.0, s=0.47) 
+; IV    - intermediate:     (eps=3.5, s=0.47) 
+; V     - almost intermediate:  (eps=3.1, s=0.47) 
+; VI    - semi repulsive:   (eps=2.7, s=0.47) 
+; VII   - almost repulsive:     (eps=2.3, s=0.47) 
+; VIII  - repulsive:        (eps=2.0, s=0.47)
+;
+; RINGS: for ring-ring interactions eps is reduced to 75%, sigma=0.43.
+
+; i j   funda c6 c12 
+; self terms
+  P5    P5      1   1.07792e-01     1.16191e-03 ; eps=2.5
+  C1    C1      1   4.31169e-02     4.64766e-04 ; eps=1.0
+; C1    C1      1   1.33662e-01     1.44077e-03 ; MOD almost intermediate
+  D     D       1   0.00000E-00     0.00000E-00 ; no LJ interaction
+;  P1    P1      1   0.19402E-00     0.20914E-02 ; almost attractive
+; cross terms 
+; P5    C1      1   0.86233E-01     0.92953E-03 ; repulsive 
+  P5    C1      1   2.15584e-02     2.32383e-04 ; eps=0.5
+  D     P5      1   0.00000E-00     0.00000E-00 ; no LJ interaction
+  D     C1      1   0.00000E-00     0.00000E-00 ; no LJ interaction
+;  P1    C1      1   0.11642E-00     0.12549E-02 ; semi repulsive
+;  P1    D       1   0.00000E-00     0.00000E-00 ; no LJ interaction
+
