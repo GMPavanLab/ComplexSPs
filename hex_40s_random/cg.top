@@ -1,0 +1,19 @@
+; Include forcefield parameters
+
+#include "ff.itp"
+; #include "w.itp"
+
+
+; #include "martini_v2.0_solvents.itp"
+; #include "martini_v2.0_ions.itp"
+; #include "fue.itp"
+#include "mon.itp"
+
+
+[ system ]
+; Name
+meta 500 monomers
+
+[ molecules ]
+; Compound        #mols
+MON    500
